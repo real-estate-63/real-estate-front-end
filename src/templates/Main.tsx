@@ -9,52 +9,54 @@ type IMainProps = {
 };
 
 const Main = (props: IMainProps) => (
-  <div className="w-full px-1 text-gray-700 antialiased">
+  <div className="w-full antialiased">
     {props.meta}
 
-    <div className="mx-auto max-w-screen-md">
-      <div className="border-b border-gray-300">
-        <div className="pt-16 pb-8">
-          <div className="text-3xl font-bold text-gray-900">
-            {AppConfig.title}
-          </div>
-          <div className="text-xl">{AppConfig.description}</div>
-        </div>
-        <div>
-          <ul className="flex flex-wrap text-xl">
-            <li className="mr-6">
-              <Link href="/">
-                <a className="border-none text-gray-700 hover:text-gray-900">
-                  Home
-                </a>
-              </Link>
-            </li>
-            <li className="mr-6">
-              <Link href="/about/">
-                <a className="border-none text-gray-700 hover:text-gray-900">
-                  About
-                </a>
-              </Link>
-            </li>
-            <li className="mr-6">
-              <Link href="/video/">
-                <a className="border-none text-gray-700 hover:text-gray-900">
-                  Video
-                </a>
-              </Link>
-            </li>
-            <li className="mr-6">
-              <a
-                className="border-none text-gray-700 hover:text-gray-900"
-                href="https://github.com/ixartz/Next-js-Boilerplate"
-              >
-                GitHub
+    <div
+      className="border-b border-gray-300"
+      style={{ backgroundColor: '#0b2c3d', height: '50px' }}
+    >
+      <div className="mx-auto max-w-screen-xl pt-2">
+        <ul className="flex h-5 flex-wrap text-xl">
+          <li className="mr-6">
+            <Link href="/">
+              <a className="border-none text-white hover:bg-yellow-400">
+                Bán đất
               </a>
-            </li>
-          </ul>
-        </div>
+            </Link>
+          </li>
+          <li className="mr-6">
+            <Link href="/about">
+              <a className="border-none text-white hover:bg-yellow-400">
+                Bán nhà phố
+              </a>
+            </Link>
+          </li>
+          <li className="mr-6">
+            <Link href="/about">
+              <a className="border-none text-white hover:bg-yellow-400">
+                Bán biệt thự
+              </a>
+            </Link>
+          </li>
+          <li className="mr-6">
+            <Link href="/video/">
+              <a className="border-none text-white hover:bg-yellow-400">
+                Bán chung cư
+              </a>
+            </Link>
+          </li>
+          <li className="mr-6">
+            <Link href="/video/">
+              <a className="border-none text-white hover:bg-yellow-400">
+                BDS khác
+              </a>
+            </Link>
+          </li>
+        </ul>
       </div>
-
+    </div>
+    <div className="mx-auto max-w-screen-xl">
       <div className="content py-5 text-xl">{props.children}</div>
 
       <div className="border-t border-gray-300 py-8 text-center text-sm">
